@@ -1,0 +1,18 @@
+\section{Related Work}
+\textbf{Model2Text Transformation.} There are plenty of articles presenting different approaches to Model2Text transformation, however we can only highlight few of them because of space limits.
+
+Albert, Munoz, Pelechano and Pastor show in the their article \cite{manoli} a Model2Text transformation where UML association specification are transformed into C\# code. For the project purpose it was necessary to extend UML proposal with association relationships and to create an input models by using a conceptual framework. In addition project required to define the set of rules to generate the C\# code. Model2Text transformation was implemented in EMD and MOFScript tools.
+
+Ugaz in his article \cite{ugaz} presents the process of Model2Text transformation using the Epsilon Generation Language (EGL), the DSLs are implemented in MetaDepth. EGL transforms a model created in DSML and formalism into the code. The formalism is the one of Role-Playing Games. The target text is a code in Java for Android application framework. The author focuses on 3 fundamental DSM elements: a domain-specific language, a domain-specific code generator and a domain-specific framework.
+
+
+\textbf{Text2Model Transformation.} Breslav focused in his paper \cite{breslav} on creating textual syntax for Domain-Specific Languages (DSL). The main concept is to represent analysis of textual syntax as a sequence of transformations, which is made by using abstract syntax trees (ASTs). the author divided the transformation process into 2 parts: Text2AST which is handled by openArchitectureWave and AST2Model proposed by the author.
+
+
+\textbf{FSML.} Framework-Specific Modeling Language (FSML) is a special category of Domain-Specific Language (DSL) that is defined on top of an object-oriented application framework, they model abstractions and rules of application programming interfaces (APIs). FSMLs help developers understand, analyze, create, migrate and evolve application code by showing how applications use APIs.
+
+FSMLs are an explicit representation of the domain-specific concepts provided by framework APIs. FSMLs are used for expressing framework-specific models of application code, which describe instances of framework-provided concepts that are implemented in the application code. In an FSML each concept instance is characterized by a configuration of features, which represents implementation steps or choices. FSML concept configuration describes how the framework should be completed in order to create the implementation of the concept (how the concept should be implemented in the code).
+
+Such models may be connected with the application code through a forward (the generation of code from FSMs by successively executing transformations for code pattern addition), a reverse (the automatic retrieval of FSMs from application code by detecting feature instances in the code) mapping enabling round-trip engineering (RTE).
+
+Antkiewicz and Czarnecki wrote an interesting paper concerning FSML \cite{FSML}, where they present the concept of FSMLs with round-trip engineering support. They focus on few challenges related to this topic: knowing how to write framework completion code, viewing the design of the completion code and the migration of the code to the new framework API versions.

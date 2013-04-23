@@ -1,0 +1,38 @@
+\section{Introduction}
+
+An Android application can contain zero or more activities. When the application has some activities needed to be run, it is important to be able to transit from one activity to another to perform another task either with or without information from the first activity. In Android, the navigation between activities is possible thanks to Intents.
+
+Intents are asynchronous messages which provide a facility for performing late runtime binding between the code in different applications and allow Android components to request functionality from other components of the Android system. Intents can also be used to signal to the Android system that a certain event has occurred.
+
+Basically an Intent is a passive data structure holding an abstract description of an action to be performed. For instance, lots of Android applications allow their users to share some data with other people e.g. via Twitter application. It is possible to send data to one of this components through an Intent.
+
+\subsection{Motivation}
+Motivation of the project is to make implementing Intent while developing Android applications easier for the programmer. We want to create a user friendly Eclipse plug-in which allows an user to choose an intent from the intents list and to put the generated code of chosen intent with default parameters settings into a proper place in the code. The code can be modified by an user e.g. it is possible to change the values of parameters.
+
+\subsection{State of the art}
+An example of a current technology for dealing with Model2Text transformation is the open source Acceleo project \cite{acceleo}, development of which started four years ago. The project aims to ease and speed up the writing of tedious framework specific completion code, and is able to create code generators specific to several frameworks like Android for one.
+
+The Acceleo provides an abstract syntax for generating concrete code and offers editor features such as highlighting, content assistance and error detection.
+
+The code generator works using a template file written in Acceleo syntax that reads in a model and generates simple .java files. The code generator can be further customized by specifying blocks in the template that must be implemented by the user after generation.
+
+Another example of Model2Text transformation this time specifically for Android devices is project called Gplad (Graphical Programming Language for Android Devices) \cite{gplad}. It is a domain-specific language that allows to generate code in a blocks-based programming interface, to obtain solutions in Common programming languages.
+
+It is created to make simple programming without a need to code. After creating graphical solution, it is possible to obtain the code in Java or SL thanks to use of Intelligent Agents as JADEAndroid.
+
+\subsection{Problem Description} 
+The specific problem we aim to solve surrounds decreasing development errors, and increasing productivity.
+
+The code required to initialize Intents, whilst relatively simple in its basic form, is prone to producing errors because of the customizability and extensive optional parameters and uses. An Intent call in a simple case will use just a few lines of code, whereas a fully extended and defined Intent could, through using additional data and specific parameter settings, grow to be quite verbose.
+
+\subsection{Goals}
+Our goal is to generate the Java code handling intents in Android applications by using a DSL model. 
+
+\subsection{Methodology}
+individual steps of action taken, intents work, dsl, code transformations, iterate
+
+We aim to solve the problems surrounding Intent usage by analysing the Domain-specific Language surrounding Intent Filters and later develop this DSL into the Eclipse Modelling Framework. This EMF model will then allow us to create an Eclipse plugin which will generate stubs of code required for Intent use. This automatic code generation will hopefully significantly reduce the possibility of development errors.
+
+We will start the development of our plugin with a small subset of Intents which we will specifically choose for their common usage and variance. We will start by developing our plugin to use Model To Text (M2T) technologies to convert our DSL and models into text that can be injected into the Eclipse editor window. Later in the project, time and scope allowing, we may instead choose to use Model To Model (M2M) to build  our framework and Intent code stubs.
+
+To evaluate the usefulness of our plugin we will run group testing with non-Android developers, and experienced Android or phone developers. We will mark our plugin successfulness around two key areas: reduction in time taken to perform specific tasks, and reduction in coding errors that occur during development. If our plugin is successful, in comparison to development without the plugin, there should be a significant reduction in both of these areas.

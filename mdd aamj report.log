@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.21)  23 APR 2013 14:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.21)  23 APR 2013 15:05
 entering extended mode
 **mdd*aamj*report.tex
-("C:\Users\Aga\Documents\aamj report\mdd aamj report.tex"
+("C:\Users\Aga\Documents\GitHub\MDDReport\mdd aamj report.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -185,7 +185,7 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-("C:\Users\Aga\Documents\aamj report\mdd aamj report.aux")
+("C:\Users\Aga\Documents\GitHub\MDDReport\mdd aamj report.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -220,10 +220,10 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
  ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2012/08/28 UCS: Unicode data U+0000..U+00FF
 )
-("C:\Users\Aga\Documents\aamj report\introduction.tex" [1
+(C:\Users\Aga\Documents\GitHub\MDDReport\introduction.tex [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2])
-("C:\Users\Aga\Documents\aamj report\background.tex" [3]
+(C:\Users\Aga\Documents\GitHub\MDDReport\background.tex [3]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -239,14 +239,31 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 30.
  [4])
-("C:\Users\Aga\Documents\aamj report\realisation.tex")
-("C:\Users\Aga\Documents\aamj report\evaluation.tex")
-("C:\Users\Aga\Documents\aamj report\threatstovalidity.tex")
-("C:\Users\Aga\Documents\aamj report\usecases.tex")
-("C:\Users\Aga\Documents\aamj report\relatedwork.tex" [5] [6])
-("C:\Users\Aga\Documents\aamj report\conclusion.tex")
-("C:\Users\Aga\Documents\aamj report\futurework.tex")
-("C:\Users\Aga\Documents\aamj report\bibliography.tex"
+(C:\Users\Aga\Documents\GitHub\MDDReport\realisation.tex
+<metamodel.jpg, id=21, 516.42938pt x 243.15843pt>
+File: metamodel.jpg Graphic file (type jpg)
+ <use metamodel.jpg>
+Package pdftex.def Info: metamodel.jpg used on input line 5.
+(pdftex.def)             Requested size: 390.0pt x 183.63728pt.
+
+<codegenerator.jpg, id=22, 404.26031pt x 194.22563pt>
+File: codegenerator.jpg Graphic file (type jpg)
+ <use codegenerator.jpg>
+Package pdftex.def Info: codegenerator.jpg used on input line 11.
+(pdftex.def)             Requested size: 390.0pt x 187.37616pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (C:\Users\Aga\Documents\GitHub\MDDReport\evaluation.tex)
+(C:\Users\Aga\Documents\GitHub\MDDReport\threatstovalidity.tex)
+(C:\Users\Aga\Documents\GitHub\MDDReport\usecases.tex)
+(C:\Users\Aga\Documents\GitHub\MDDReport\relatedwork.tex [5 <C:/Users/Aga/Docum
+ents/GitHub/MDDReport/metamodel.jpg>] [6 <C:/Users/Aga/Documents/GitHub/MDDRepo
+rt/codegenerator.jpg>]) [7]
+(C:\Users\Aga\Documents\GitHub\MDDReport\conclusion.tex)
+(C:\Users\Aga\Documents\GitHub\MDDReport\futurework.tex)
+(C:\Users\Aga\Documents\GitHub\MDDReport\bibliography.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-1.def"
 File: uni-1.def 2012/08/28 UCS: Unicode data U+0100..U+01FF
 )
@@ -255,26 +272,27 @@ Overfull \hbox (80.5159pt too wide) in paragraph at lines 38--41
 .com/reference/android/content/Intent.html\OT1/cmr/m/n/12 .
  []
 
-) [7] ("C:\Users\Aga\Documents\aamj report\mdd aamj report.aux") ) 
+) [8] ("C:\Users\Aga\Documents\GitHub\MDDReport\mdd aamj report.aux") ) 
 Here is how much of TeX's memory you used:
- 5060 strings out of 493921
- 64208 string characters out of 3147288
+ 5072 strings out of 493921
+ 64539 string characters out of 3147288
  128971 words of memory out of 3000000
- 8303 multiletter control sequences out of 15000+200000
+ 8311 multiletter control sequences out of 15000+200000
  8003 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,7n,32p,631b,1251s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "mdd aamj report.pdf" (7 pages, 130665 bytes).
+<C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.
+pfb>
+Output written on "mdd aamj report.pdf" (8 pages, 220749 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

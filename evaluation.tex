@@ -1,3 +1,16 @@
 \section{Evaluation}
 \subsection{Method}
+To evaluate our plug-in we wanted to conduct a proper trial to highlight the benefits of using the code generation from the plug-in which carries out the Intent instantiation for you as opposed to having developers write the code themselves.
+
+We based our test primarily on measuring the difference in time spent creating a group of intents to be inserted in a pre-made Android application with just one Activity in it. The method stubs are left empty for the trial participants to fill out with the correct code, using either the plug-in or manually. We were briefly contemplating having trial participants building the entire application from scratch but regressed from this idea in that a trial design like that would be introducing to many variables to our test and it would be difficult to dissect the results and clearly establish the effects of using our plug-in.
+
+The intents required for the participants to create also requires them to insert permissions into the application manifest file, which the plug-in handles for the participants who were instructed to use it.
+
+The participants were split into two groups based on Java programming experience. The least experienced were instructed to use the plug-in and the more experienced were told to do the implementation on their own, with the Google search-engine as their only help.
+
+For the trial we wanted to focus on getting quantifiable data which is why we decided to measure the implementation time, so we can not know for sure if using our plug-in would bring about qualitative improvements as well.
+
+The participants were given a short introduction to the task first, and they were given opportunity to see the application in action on an Android device. After this the subjects were placed in front of a computer and the timer was started. Deciding when the subject was done the task was done by reviewing the code they had written.
+
+
 \subsection{Results}

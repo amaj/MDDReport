@@ -1,3 +1,8 @@
+mdd aamj report.aux
+mdd aamj report.log
+mdd aamj report.pdf
+mdd aamj report.synctex.gz
+
 #################
 ## Eclipse
 #################

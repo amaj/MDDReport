@@ -166,3 +166,8 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+/TSWLatexianTemp_mdd aamj report.aux
+/TSWLatexianTemp_mdd aamj report.log
+/TSWLatexianTemp_mdd aamj report.pdf
+/TSWLatexianTemp_mdd aamj report.tex

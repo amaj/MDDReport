@@ -1,10 +1,10 @@
 \section{Evaluation}
 \subsection{Method}
-To evaluate our plug-in we wanted to conduct a proper trial to highlight the benefits of using the code generation from the plug-in which carries out the Intent instantiation for you as opposed to having developers write the code themselves.
+To evaluate our plug-in we want to conduct a proper trial to highlight the benefits of using the code generation from the plug-in which carries out the Intent instantiation for you as opposed to having developers write the code themselves.
 
-We based our test primarily on measuring the difference in time spent creating a group of intents to be inserted in a pre-made Android application with just one Activity in it. The method stubs are left empty for the trial participants to fill out with the correct code, using either the plug-in or manually. We were briefly contemplating having trial participants building the entire application from scratch but regressed from this idea in that a trial design like that would be introducing to many variables to our test and it would be difficult to dissect the results and clearly establish the effects of using our plug-in.
+We will base our test primarily on measuring the difference in time spent creating a group of intents to be inserted in a pre-made Android application with just one Activity in it. The method stubs are left empty for the trial participants to fill out with the correct code, using either the plug-in or manually. We were briefly contemplating having trial participants building the entire application from scratch but regressed from this idea in that a trial design like that would be introducing to many variables to our test and it would be difficult to dissect the results and clearly establish the effects of using our plug-in.
 
-The intents required for the participants to create also requires them to insert permissions into the application manifest file, which the plug-in handles for the participants who were instructed to use it.
+The intents required for the participants to create also requires them to insert permissions into the application manifest file, which the plug-in handles for the participants who are instructed to use it.
 
 The participants were split into two groups based on Java programming experience. The least experienced were instructed to use the plug-in and the more experienced were told to do the implementation on their own, with the Google search-engine as their only help.
 
@@ -14,3 +14,35 @@ The participants were given a short introduction to the task first, and they wer
 
 
 \subsection{Results}
+We conducted the trial and recorded the results given in table below:
+ 
+
+\begin{tabular}{|c|c|c|}
+\hline 
+& With the plug-in & Without the plug-in \\ 
+\hline 
+& 1:20 & 2:59 \\ 
+\hline 
+& 1:08 & 7:02 \\ 
+\hline 
+& 1:30 & 4:20 \\ 
+\hline 
+& 2:00 & 3:30 \\ 
+\hline 
+ & 1:09 & • \\ 
+\hline
+Average: & 1:25 & 4:28
+\end{tabular} 
+
+As is palpably shown from the table the average implementation time was cut severely by a factor of ~3, suggesting that the use of the plug-in may very well contribute to the effectiveness of the developer.
+
+These result were very much along the lines of what we had hoped for when we initially set out to create the prototype, and the vast gap in implementation time between the two groups clearly indicates that the use of code generation tools may be of use not only to cut the time spent typing and making documentation lookups but also to further the correctness of what is written and reduce time spent bug-fixing as a project develops. (AM I LAYING IT ON TO THICK HERE????)  
+
+
+
+
+
+
+
+
+

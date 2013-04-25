@@ -10,15 +10,11 @@ Basically an Intent is a passive data structure holding an abstract description 
 Motivation of the project is to make implementing Intent while developing Android applications easier for the programmer. We want to create a user friendly Eclipse plug-in which allows an user to choose an intent from the intents list and to put the generated code of chosen intent with default parameters settings into a proper place in the code. The code can be modified by an user e.g. it is possible to change the values of parameters.
 
 \subsection{State of the art}
-An example of a current technology for dealing with Model2Text transformation is the open source Acceleo project \cite{acceleo}, development of which started four years ago. The project aims to ease and speed up the writing of tedious framework specific completion code, and is able to create code generators specific to several frameworks like Android for one.
+An example of a current technology for dealing with Model-to-Text transformation is the open source Acceleo project \cite{acceleo}, development of which started four years ago. The project aims to ease and speed up the writing of tedious framework specific completion code, and is able to create code generators specific to several frameworks, like Android for one.
 
-The Acceleo provides an abstract syntax for generating concrete code and offers editor features such as highlighting, content assistance and error detection.
+The Acceleo project provides an abstract syntax for generating concrete code and offers editor features such as highlighting, content assistance and error detection. The code generator works using a template file written in the Acceleo syntax, that reads in a model and generates simple .java files. The code generator can be further customized by specifying blocks in the template that must be implemented by the user post generation.
 
-The code generator works using a template file written in Acceleo syntax that reads in a model and generates simple .java files. The code generator can be further customized by specifying blocks in the template that must be implemented by the user after generation.
-
-Another example of Model2Text transformation this time specifically for Android devices is project called Gplad (Graphical Programming Language for Android Devices) \cite{gplad}. It is a domain-specific language that allows to generate code in a blocks-based programming interface, to obtain solutions in Common programming languages.
-
-It is created to make simple programming without a need to code. After creating graphical solution, it is possible to obtain the code in Java or SL thanks to use of Intelligent Agents as JADEAndroid.
+An additional example of Model-to-Text transformation that is specifically built for Android devices is the project Gplad (Graphical Programming Language for Android Devices) \cite{gplad}. It is a domain-specific language that allows code generation in a block-based programming interface, to obtain solutions in various common programming languages, including Java. It's aim is provide a simple programming environment without necessarily needing advanced coding knowledge.
 
 \subsection{Problem Description} 
 The specific problem we aim to solve surrounds decreasing development errors, and increasing productivity.

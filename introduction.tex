@@ -29,8 +29,12 @@ The first stage in our development is to analyse the DSL anatomy of Android Inte
 
 Once our Model has been revised to an extent that we believe it is suitable for the majority of available Intents, we will then develop our Xtext grammar using the generated grammar that Xtext provides as a base. The grammar will be revised to simplify the development in the concrete syntax, and our previous selection of Intents will be built in this Xtext grammar.
 
-As proof of concept, will then develop a simple Model-to-Text (M2T) transformation using Xpand that will allow us to generate simple Java files which will demonstrate that our models are capable of producing the code required. The final step in development is to build the Eclipse plug-in that reads our models and generates the Eclipse AST nodes required to provide a Model-to-Model transformation. The final stage is to throughly test our plug-in and run our evaluation.
+The next step in development is to build the Eclipse plug-in that reads our models and generates the Eclipse AST nodes required to provide a Model-to-Model transformation. The final stage is to thoroughly test our plug-in and run our evaluation.
 
 If time allows, additional functionality will be built into the plug-in which will manage the Android Manifest XML file permission nodes, provide exception handling code, and finally provide additional support for individual Intent cases where the standard code can be enhanced to give better support (for example, Intents that require a response require an additional method to receive this response).
 
 This planned methodology enables us to revise our DSL and model several times through development, and ensure each stage is completed successfully, but these additional processes and iterations, will increase development time.
+
+\subsection{Outline}
+This paper is organised as follows. In Section \ref{background} we present the 
+Android Intents syntax. We also make an overview of the tools we use in the project. In the next Section \ref{realisation} we present step-by-step solution for the intent code generation. In Section \ref{evaluation} we evaluate our solution and we discuss its results and we discuss threats to validity of our solution in Section \ref{threatstovalidity}. In Section \ref{relatedwork} we present some of the found related work. In Section \ref{usecases} we present ideas for usage of the Intent model. We conclude our research in Section \ref{conclusion} and in Section \ref{futurework} we suggest ideas for the future projects.

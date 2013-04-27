@@ -1,8 +1,60 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{ast}
+Abstract syntax tree, eclipse article.
+\newblock
+  \url{http://www.eclipse.org/articles/article.php?file=Article\-JavaCodeManipulation\_AST/index.html},
+  April 2013.
+
+\bibitem{acceleo}
+Acceleo home page.
+\newblock \url{http://www.acceleo.org/pages/home/en}, April 2013.
+
+\bibitem{intent}
+Android developer.
+\newblock
+  \url{http://developer.android.com/reference/android/content/Intent.html},
+  April 2013.
+
+\bibitem{emf}
+Eclipse modelling framework home page.
+\newblock \url{http://www.eclipse.org/modeling/emf/}, April 2013.
+
+\bibitem{gplad}
+Gplad project page.
+\newblock \url{http://code.google.com/p/gplad/}, April 2013.
+
+\bibitem{jdt}
+Vogella - eclipse jdt tutorial.
+\newblock \url{http://www.vogella.com/articles/EclipseJDT/article.html}, April
+  2013.
+
+\bibitem{xtext}
+Xtext.
+\newblock \url{http://www.eclipse.org/Xtext/}, April 2013.
 
 \bibitem{FSML}
 Michal Antkiewicz and Krzysztof Czarnecki.
 \newblock Framework-specific modeling languages with round-trip engineering.
 \newblock {\em University of Waterloo}, 2006.
+
+\bibitem{breslav}
+Andrey Breslav.
+\newblock Dsl development based on target meta-models. using ast
+  transformations for automating semantic analysis in a textual dsl framework.
+\newblock {\em St. Petersburg State Univeristy of Information Technology,
+  Mechanics and Optics}, 2006.
+
+\bibitem{manoli}
+Vicente~Pelechano Manoli~Albert, Javier~Munoz and Oscar Pastor.
+\newblock Model to text transformation in practice: Generating code from rich
+  associations specifications.
+\newblock {\em Department of Information Systems and Computation Technical
+  University of Valencia}, 2006.
+
+\bibitem{ugaz}
+Rafael Ugaz.
+\newblock Dsm model-to-text generation: from meatdepth to android with egl.
+\newblock {\em Antwerp University}, 2013.
 
 \end{thebibliography}

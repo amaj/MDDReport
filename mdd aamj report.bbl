@@ -45,6 +45,11 @@ Andrey Breslav.
 \newblock {\em St. Petersburg State Univeristy of Information Technology,
   Mechanics and Optics}, 2006.
 
+\bibitem{atl}
+Jean Bezivin Ivan~Kurtev Frederic~Jouault, Freddy~Allilaire.
+\newblock Atl: A model ransformation tool.
+\newblock {\em Elsevier. Science of Computet Programming}, 2008.
+
 \bibitem{manoli}
 Vicente~Pelechano Manoli~Albert, Javier~Munoz and Oscar Pastor.
 \newblock Model to text transformation in practice: Generating code from rich

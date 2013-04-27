@@ -8,4 +8,8 @@ Warning--to sort, need author or key in emf
 Warning--to sort, need author or key in xtext
 Warning--to sort, need author or key in jdt
 Warning--to sort, need author or key in ast
-(There were 7 warnings)
+Too many commas in name 1 of "Frederic Jouault, Freddy Allilaire, Jean Bezivin, Ivan Kurtev" for entry atl
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Frederic Jouault, Freddy Allilaire, Jean Bezivin, Ivan Kurtev" for entry atl
+while executing---line 1090 of file plain.bst
+(There were 2 error messages)

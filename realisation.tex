@@ -1,6 +1,6 @@
 \section{Realisation}
 
-Our implementation of the plug-in corresponds to the schema presented in the figure \ref{flowchart}. We can divide our work into 2 stages, firstly we analyse and model the Android Intents and create abstract and concrete syntax. Next we load abstract syntax by using JDT with accessing Java source code with AST and we develop our Eclipse plug-in. All the steps will be described in more details in this chapter.  
+Our implementation of the plug-in corresponds to the schema presented in the figure \ref{flowchart}. We can divide our work into 2 stages; firstly we analyse and model the Android Intents and then develop this model into abstract and concrete syntaxes. The second stage is the plug-in development where we transform our existing abstract syntax data into structured JDT methods which will be called to perform our code generation. All the steps will be described in more details in this section.  
 
 \begin{figure}[H]
 \label{flowchart}
@@ -9,7 +9,7 @@ Our implementation of the plug-in corresponds to the schema presented in the fig
   \caption{Flow chart}
 \end{figure}
 
-We started our project by determining the meta-model of the Android Intents. We based our model on several examples taken from Open Intents website\footnote{http://www.openintents.org/en/} and the knowledge presented in the chapter \ref{intents}. We show our ECore meta-model in the figure \ref{meta-model}.
+We started our project by determining the DSL of Android Intents and built our Ecore meta-model which reflected the DSL. Our DSL was based on several examples taken from Open Intents website\footnote{http://www.openintents.org/en/}, the default Android Intents included in Android, and finally the knowledge presented in the chapter \ref{intents}. The final Ecore model in shown the figure \ref{meta-model}.
 
 \begin{figure}[H]
 \label{meta-model}
@@ -18,23 +18,25 @@ We started our project by determining the meta-model of the Android Intents. We 
   \caption{Meta-model of Intent}
 \end{figure}
 
-Next we created grammar for our DSL by using XText and we made some examples of Intents in DSL to proof that the model based on is working. We use these newly created Intents as a database for our plug-in. The example of an Intent in our DSL is shown below:
+The second stage of development was to take this model and build the XText grammar. The final XText grammar we produced was based on the default grammar that was generated but with several modifications for simplification and the use of enumerated types. To test the grammar we developed several models based on some examples that we had previously chosen. This allowed us to make changes to both the XText grammar and the Ecore model when one or both didn't suit the required data from the Intents. The developed models in our DSL are used as our dataset for the plug-in. An example of an Intent in our DSL is shown below:
 
-{\footnotesize\begin{lstlisting}
+{\footnotesize\begin{lstlisting}[escapechar=!]
 ImplicitIntent ActionSendText {
 	type "text/plain"
 	category "android.intent.category.DEFAULT"
 	action "android.intent.action.SEND"
 	extras {
-		StringExtra "android.intent.extra.TEXT" 
+		StringExtra "android.intent.extra.TEXT" !$\hookleftarrow$!
 		"Put your text here"
 	}
 },
 \end{lstlisting}}
 
-Later we develop the Eclipse plug-in. For this purpose we use JDT and AST explained in the chapter \ref{tools}. JDT is used to modify Java source code and AST is used to access Java source code. We load our abstract syntax of Android Intents and we transform it into Abstract Syntax Tree, which is a simple Model To Model Transformation (M2M).
+The plug-in uses Model-to-Model transformations, and for this purpose we use JDT and AST as explained in the chapter \ref{tools}. The dataset as defined in our abstract syntax is loaded, and the plug-in interface is built by iterating over the dataset; the final plug-in interface is presented in the figure \ref{codegeneratorview}. The interface allows a user to choose an Intent and generate the respective code in place where the cursor is. This code is generated through a Model-to-Model transformation from the data held in the abstract syntax to the AST nodes.
 
-Our plug-in view is presented in the figure \ref{codegeneratorview}. An user can choose an intent and double-click on it. The generated code stub will appear on the place where the cursor is. If the cursor is positioned outside the method, it will create the method with the intent code inside. It is also possible to search for a specific intent in our intents database and to turn on or off the exception handling.
+The plug-in is capable of handling the three different types of Intent identified; standard Activity Intents, broadcast Intents, and finally Intents with a callback. The plug-in provides several additional features to aid the developer: searching the dataset, enabling exception handling, producing callback methods if required, and finally the AndroidManifest.xml file is modified with any required permissions.
+
+These additional features provide a quick and efficient experience for the developer, with intervention only required when the default settings produced should be modified.
 
 \begin{figure}[H]
 \label{codegeneratorview}
@@ -43,7 +45,7 @@ Our plug-in view is presented in the figure \ref{codegeneratorview}. An user can
   \caption{Code generator view}
 \end{figure}
 
-We present the generated code below for an Intent which sends a customized text to a non specified receiver.
+Below is an example of the generated code for an Intent which sends a customized text to a non specified receiver.
 
 {\footnotesize\begin{lstlisting}
 public class IntentExample

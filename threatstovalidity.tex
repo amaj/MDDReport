@@ -1,16 +1,14 @@
-\section{Threats to validity}
+\section{Threats to Validity}
 
-\subsection{Internal Threats}
+\subsection{Internal Validity}
 There are several possible problems that can occur when relying on black box testing to ensure the validity of software. The primary concern is ensuring all possible paths through the software have been tested, whether user interaction has avoided possible errors, or simply ignored them, and ensuring all functionality of the software has been tested thoroughly. Some of these possible error situations could be discovered and resolved through automated testing, but by basing our project on existing software with a long history and extensive testing suits, it can be strongly argued for the integrity of our code by ensuring it conforms to all standards.
 
 Our testing method could also be improved upon by including more participants, and increase the amount of testing each participant is required to perform. This would help reduce the amount of potential anomalies in our results, and ensure better test coverage for our plug-in. Our testing would also ideally include experienced Android developers with enough knowledge to be able to write Intent code without the need to look up variables and code structures; this would put a new element into our testing so that we could compare the time taken to write code, against the time taken to open our plug-in, find the correct Intent action, and ensure that the code generated is correctly inserted.
 
-However, this threat against our plug-in can be extinguished by referring to our original aim, which was to reduce development errors and time taken for developers, by showing that our test results clearly indicate that non-experienced Java developers using our plug-in were significantly faster at developing our test application against experienced Java developers without it.
+%However, this threat against our plug-in can be extinguished by referring to our original aim, which was to reduce development errors and time taken for developers, by showing that our test results clearly indicate that non-experienced Java developers using our plug-in were significantly faster at developing our test application against experienced Java developers without it.
 
-A final internal threat to our plugin is the lack of data that our plug-in holds. Although our dataset covers a wide range of Intents, it is relatively small and therefore we have only tested a very limited set of Intents through our development. It therefore not possible to confirm that our plug-in would work for all of the many Intents available.
+\subsection{External Validity}
 
-\subsection{External Threats}
+A external validity threat to our plugin is the lack of data that our plug-in holds. Although our dataset covers a wide range of Intents, it is relatively small and therefore we have only tested a very limited set of Intents through our development. It therefore not possible to confirm that our plug-in would work for all of the many Intents available.
 
-External threats to our plug-in are limited but potentially drastic. Without the ability to update the Intent database that our plug-in stores, we cannot ensure that our database has up-to-date and correct information for the all intents available. This could cause potential problems if the Android core Intents were to change in future versions. It is also true that our current dataset cannot guarantee compatibility across all versions of the Android SDK.
-
-This version compatibility issue also goes for the Eclipse JDT library, although changes to a core component of Eclipse are unlikely and would most probably be backwards compatible.
+In addition to this, without the ability to update the Intent database that our plug-in stores, we cannot ensure that our database has up-to-date and correct information for all Intents available. This could cause potential problems if the Android core Intents were to change in future versions. It is also true that our current dataset cannot guarantee compatibility across all versions of the Android SDK.

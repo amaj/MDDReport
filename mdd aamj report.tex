@@ -24,8 +24,8 @@
 
 \begin{abstract}
 This paper describes the process of creating a development tool for programmers using the Android platform, specifically in Intent code generation.
-Intents are abstract ways of describing processes to be performed, and the implementation code can be verbose and tedious to write. While the coding of intents is not difficult to comprehend the specifics of data types and settings for each Intent makes the process error prone. The tool we will be describing in this paper is one that allows for the programmer to insert the generated code of an Intent call at a desired location in an editor in Eclipse.
-The tool comes in the form of a plug-in to be installed in Eclipse, which is generated based on a Domain Specific Language created using Ecore EMF models and Xtext generated grammar.
+Intents are abstract ways of describing processes to be performed, and the implementation code can be verbose and tedious to write. While the coding of intents is not difficult to comprehend the specifics of data types and settings for each Intent makes the process error prone. The tool we will be describing in this paper is to be seen as a case study into the MDD approach for creating a prototype that allows a programmer to insert generated code of an Intent call at a desired location in an editor in Eclipse.
+The prototype comes in the form of a plug-in to be installed in Eclipse, which is generated based on a Domain Specific Language created using Ecore EMF models and Xtext generated grammar.
 The models done in the DSL is transformed into models in the Java Abstract Syntax Tree(AST) using the Eclipse Java Development Tools(JDT)before being injected in to Eclipse plug-in view.
 After conducting a proper trial testing the efficacy of using our plug-in the results were clearly indicating a remarkable cut in average implementation time.    
 \end{abstract}

@@ -35,6 +35,7 @@ ImplicitIntent ActionSendText {
 
 The plug-in uses Model-to-Model transformations, and for this purpose we use JDT and AST as explained in the Section \ref{tools}. The dataset as defined in our abstract syntax is loaded, and the plug-in interface is built by iterating over the dataset; the final plug-in interface is presented in the figure \ref{codegeneratorview}. The interface allows a user to choose an Intent and generate the respective code in place where the cursor is. This code is generated through a Model-to-Model transformation from the data held in the abstract syntax to the AST nodes.
 
+The Java code snippet shown bellow, shows how to load a DSL object into a stand alone Java application with the getBundle()-method which alocates specific objects when the application needs to locate such object using this method, it does allow to write independent Java application.
 {\footnotesize\begin{lstlisting}[escapechar=!]
 public Model getModel() {
 		Injector injector = new IntentDslStandaloneSetup().createInjectorAndDoEMFRegistration();
@@ -45,11 +46,8 @@ public Model getModel() {
 		Resource resource = resourceSet.getResource(URI.createURI(fileURL.toString()), true);
 		model = (Model) resource.getContents().get(0);
 		return model;
-	},
+	}
 \end{lstlisting}}
-
-The Java code snippet shown above, shows how to load a DSL object into a stand alone Java application with the getBundle()-method which alocates specific objects when the application needs to locate such object using this method, it does allow to write independent Java application.
-
 Once the URL which hold the DLS it is a created, we can use the Java annotation Resource, this annotation marks a recource that is needed by the application, these resources resposes can Strings or Booleans, in this case the algorithm converts the resource to a string and return it to be use with in the Eclipse Plugin. 
 
  

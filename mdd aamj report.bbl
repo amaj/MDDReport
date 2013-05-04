@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
 \bibitem{ast}
 Abstract syntax tree, eclipse article.
@@ -38,28 +38,9 @@ Michal Antkiewicz and Krzysztof Czarnecki.
 \newblock Framework-specific modeling languages with round-trip engineering.
 \newblock {\em University of Waterloo}, 2006.
 
-\bibitem{breslav}
-Andrey Breslav.
-\newblock Dsl development based on target meta-models. using ast
-  transformations for automating semantic analysis in a textual dsl framework.
-\newblock {\em St. Petersburg State Univeristy of Information Technology,
-  Mechanics and Optics}, 2006.
-
 \bibitem{atl}
 Jean Bezivin Ivan~Kurtev Frederic~Jouault, Freddy~Allilaire.
 \newblock Atl: A model ransformation tool.
 \newblock {\em Elsevier. Science of Computet Programming}, 2008.
-
-\bibitem{manoli}
-Vicente~Pelechano Manoli~Albert, Javier~Munoz and Oscar Pastor.
-\newblock Model to text transformation in practice: Generating code from rich
-  associations specifications.
-\newblock {\em Department of Information Systems and Computation Technical
-  University of Valencia}, 2006.
-
-\bibitem{ugaz}
-Rafael Ugaz.
-\newblock Dsm model-to-text generation: from meatdepth to android with egl.
-\newblock {\em Antwerp University}, 2013.
 
 \end{thebibliography}

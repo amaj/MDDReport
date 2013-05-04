@@ -23,4 +23,16 @@ The next step in development is to build the Eclipse plug-in that reads our mode
 
 This planned methodology enables us to revise our DSL and model several times through development, and ensure each stage is completed successfully, but these additional processes and iterations, will increase development time.
 
-This paper is organised as follows. In Section \ref{background} we present the Android Intent syntax and make an overview of the tools we use in the project. In Section \ref{realisation} we present the step-by-step solution for the Intent code generation. In Section \ref{evaluation} we evaluate our solution, and then discuss its results and the threats to validity of our solution in Section \ref{threatstovalidity}. In Section \ref{usecases} we present ideas for usage of the Intent model, and in Section \ref{relatedwork} we present some of the found related work. We conclude our research in Section \ref{conclusion}, and finally in Section \ref{futurework}, we suggest ideas for future projects.
+The work we have done over the course of this project has concluded with a final plug-in for which the scope of functionality can be further expanded, with our current code base providing the basis for further development into areas such as:
+
+	- Code generation to a greater extent. This could include generation of code for broadcast receivers and Intent callback methods.
+
+	- Automatic code completion.
+
+	- Extracting Intent calls from existing code.
+
+	- Acquiring the data for Intent code generation, from an external database.
+
+	- Adding permissions to the manifest file automatically, if the data we have concerning a specific Intent indicates that it is required.
+
+This paper is organised as follows. In Section \ref{background} we present the Android Intent syntax and make an overview of the tools we use in the project. In Section \ref{realisation} we present the step-by-step solution for the Intent code generation. In Section \ref{evaluation} we evaluate our solution, and then discuss its results and the threats to validity of our solution in Section \ref{threatstovalidity}. In section \ref{relatedwork} we present some of the found related work. We conclude our research in Section \ref{conclusion}, and finally in Section \ref{futurework}, we suggest ideas for future projects.

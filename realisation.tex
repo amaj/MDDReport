@@ -3,7 +3,7 @@
 
 Our implementation of the plug-in corresponds to the schema presented in the Figure \ref{flowchart}. We can divide our work into 2 stages; first we analyse and model the Android Intents and then develop this model into abstract and concrete syntax. The second stage is the plug-in development where we transform our existing abstract syntax data into structured JDT methods which will be called to perform our code generation. All the steps will be described in more details in this section.  
 
-\begin{figure}[H]
+\begin{figure}[t]
 \label{flowchart}
   \centering
     \includegraphics[width=0.8\textwidth]{flowchart}
@@ -12,7 +12,7 @@ Our implementation of the plug-in corresponds to the schema presented in the Fig
 
 We started our project by determining the DSL of Android Intents and built our Ecore meta-model which reflected the DSL. Our DSL was based on several examples taken from Open Intents website\footnote{http://www.openintents.org/en/}, the default Android Intents included in Android, and finally the knowledge presented in the chapter \ref{intents}. The final Ecore model in shown the figure \ref{meta-model}.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \label{meta-model}
   \centering
     \includegraphics[width=\textwidth]{metamodel}
@@ -35,10 +35,28 @@ ImplicitIntent ActionSendText {
 
 The plug-in uses Model-to-Model transformations, and for this purpose we use JDT and AST as explained in the Section \ref{tools}. The dataset as defined in our abstract syntax is loaded, and the plug-in interface is built by iterating over the dataset; the final plug-in interface is presented in the figure \ref{codegeneratorview}. The interface allows a user to choose an Intent and generate the respective code in place where the cursor is. This code is generated through a Model-to-Model transformation from the data held in the abstract syntax to the AST nodes.
 
+{\footnotesize\begin{lstlisting}[escapechar=!]
+public Model getModel() {
+		Injector injector = new IntentDslStandaloneSetup().createInjectorAndDoEMFRegistration();
+		XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
+		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
+		Bundle bundle = Platform.getBundle("itu.dk.aamj.intentdsl.ui");
+		URL fileURL = bundle.getEntry("gen/i.intentdsl");
+		Resource resource = resourceSet.getResource(URI.createURI(fileURL.toString()), true);
+		model = (Model) resource.getContents().get(0);
+		return model;
+	},
+\end{lstlisting}}
+
+The Java code snippet shown above, shows how to load a DSL object into a stand alone Java application with the getBundle()-method which alocates specific objects when the application needs to locate such object using this method, it does allow to write independent Java application.
+
+Once the URL which hold the DLS it is a created, we can use the Java annotation Resource, this annotation marks a recource that is needed by the application, these resources resposes can Strings or Booleans, in this case the algorithm converts the resource to a string and return it to be use with in the Eclipse Plugin. 
+
+ 
 The plug-in is capable of handling the three different types of Intent identified; standard Activity Intents, broadcast Intents, and finally Intents with a callback. The plug-in provides several additional features to aid the developer: searching the dataset, enabling exception handling, producing callback methods if required, and finally the AndroidManifest.xml file is modified with any required permissions.
 
 
-\begin{figure}[H]
+\begin{figure}[t]
 \label{codegeneratorview}
   \centering
     \includegraphics[width=\textwidth]{codegenerator}

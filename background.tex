@@ -4,19 +4,21 @@
 \subsection{Intents} 
 \label{intents}
 When it comes to Intents there is a distinction between explicit and implicit types of intents \cite{intent}.
-An explicit Intent is primarily used for launching internal activities since it carries specific information as to what class is to be put on the activity stack and executed. The Intent can be explicitly run via the startActivity() method, this method pass the intent, therefore the systems receives this call to start an new instance of the Activity providing only the launching context and the target class to be executed as constructor parameters, this constructor in some cases contains a function callback onStartActivityResult() which check some parameters such requestCode to identify which application returned those results, data holds which any information but it could also be null.
+An explicit Intent is primarily used for launching internal activities since it carries specific information as to what class is to be put on the activity stack and executed. The code for this type of an Intent is presented in a listing \ref{explicitIntent}. The Intent can be explicitly run via the startActivity() method, this method pass the intent, therefore the systems receives this call to start an new instance of the Activity providing only the launching context and the target class to be executed as constructor parameters, this constructor in some cases contains a function callback onStartActivityResult() which check some parameters such requestCode to identify which application returned those results, data holds which any information but it could also be null.
 
-{\footnotesize\begin{lstlisting}
+\footnotesize\begin{lstlisting}[label=explicitIntent,caption=Explicit Intent]
 @Override
 public void onClick(View arg0){
     Intent i = new Intent(this, SecondActivity.class);
     startActivityForResult(i, 1);
 }
-\end{lstlisting}}
+\caption{A Caption}
+\label{lst:Listing}
+\end{lstlisting}
 
-The use of implicit Intents complicates the matter a bit, in that the level of abstraction becomes higher. The Intent is no longer directly associated to an activity but rather a generic action that later, as a result of Intent Resolution, will be mapped to a specific activity or service.
+The use of implicit Intents (listing \ref{implicitIntent}) complicates the matter a bit, in that the level of abstraction becomes higher. The Intent is no longer directly associated to an activity but rather a generic action that later, as a result of Intent Resolution, will be mapped to a specific activity or service.
 
-{\footnotesize\begin{lstlisting}
+{\footnotesize\begin{lstlisting}[label=implicitIntent,caption=Implicit Intent]
 Intent intent = new Intent(Intent.ACTION_SEND);
 intent.setType("text/plain");
 intent.putExtra(android.content.Intent.EXTRA_TEXT, 
@@ -24,12 +26,12 @@ intent.putExtra(android.content.Intent.EXTRA_TEXT,
 startActivity(intent);
 \end{lstlisting}}
 
-Activities has a single focus point, interaction with users. Activities class takes care of wich windows those the application is placed in the UI. 
+Activities have a single focus point, interaction with users. Activities class takes care of which windows those the application is placed in the UI. 
 
 
-Since more than one activity or service can be eligible for carrying out a generic action, the Manifest-file of the application will define the conditions upon which to choose the correct activity or service given the context. When an activity is declared in the manifest the use of Intent Filters serve to inform which implicit actions they can handle.
+Since more than one activity or service can be eligible for carrying out a generic action, the Manifest-file of the application will define the conditions upon which to choose the correct activity or service given the context. When an activity is declared in the manifest the use of Intent Filters serve to inform which implicit actions they can handle. Examples of Intent Filters are presented in a listing \ref{intentFilters}.
 
-{\footnotesize\begin{lstlisting}
+{\footnotesize\begin{lstlisting}[label=intentFilters,caption=Intent Filters]
 <intent-filter . . . >
    <action android:name="com.example.project.SHOW_CURRENT" />
    <action android:name="com.example.project.SHOW_RECENT" />

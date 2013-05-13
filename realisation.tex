@@ -18,7 +18,7 @@ Our implementation of the plug-in corresponds to the schema presented in the Fig
 \end{minipage}%
 \end{figure}
 
-We begin by determining the DSL of Android Intents and built our Ecore meta-model which reflected the DSL. Our DSL is based on several examples taken from Open Intents website\footnote{http://www.openintents.org/en/}, the default Android Intents included in Android, and finally the knowledge presented in the chapter \ref{intents}. The final Ecore model is shown the Figure \ref{meta-model}.
+We begin by determining the DSL of Android Intents and built our Ecore meta-model which reflected the DSL. Our DSL is based on several examples taken from Open Intents website\footnote{http://www.openintents.org/en/}, the default Android Intents included in Android, and finally the knowledge presented in the section \ref{intents}. The final Ecore model is shown the Figure \ref{meta-model}. Here Model is our root element that leads to an Intent. Each Intent has action, category and data well described in the section \ref{intents}. It is specified by an Intent type: standard or broadcast. If needed it can contain some Extras, Permissions and Callback.
 
 \begin{figure}[t]
 \label{meta-model}
@@ -41,7 +41,7 @@ ImplicitIntent ActionSendText {
 },
 \end{lstlisting}}
 
-The plug-in uses Model-to-Model transformations, and for this purpose we use JDT and AST as explained in the Section \ref{tools}. The database as defined in our abstract syntax is loaded, and the plug-in interface is built by iterating over the data; the final plug-in interface is presented in the figure \ref{codegeneratorview}. The interface allows a user to choose an Intent and generate the respective code in place where the cursor is. This code is generated through a Model-to-Model transformation from the data held in the abstract syntax to the AST nodes.
+The plug-in uses Model-to-Model transformations, and for this purpose we use JDT and AST as explained in the Section \ref{tools}. The database as defined in our abstract syntax is loaded, and the plug-in interface is built by iterating over the data; the final plug-in interface is presented in the Figure \ref{codegeneratorview}. The interface allows a user to choose an Intent and generate the respective code in place where the cursor is. This code is generated through a Model-to-Model transformation from the data held in the abstract syntax to the AST nodes.
 
 The Java code snippet shown in the Listing \ref{loadingDsl}, shows how to load a DSL object into a stand alone Java application with the getBundle() method which allocates specific objects when the application needs to locate such object using this method, it does allow to write independent Java application.
 
@@ -62,7 +62,7 @@ Once the URL which hold the DLS it is a created, we can use the Java annotation 
  
 The plug-in is capable of handling the three different types of Intent identified; standard Activity Intents, broadcast Intents, and Intents with a callback. The plug-in provides several additional features to aid the developer: searching the dataset, enabling exception handling, producing callback methods if required, and finally the AndroidManifest.xml file is modified with any required permissions. These additional features provide a quick and efficient experience for the developer, with intervention only required when the default settings produced should be modified.
 
-The final plug-in view is shown in Figure \ref{codegeneratorview}. Below we show an example of the generated code for an Intent which sends a customized text to a non specified receiver.
+The final plug-in view is shown in Figure \ref{codegeneratorview}. In the listing \ref{generatedCode} we show an example of the generated code for an Intent which sends a customized text to a non specified receiver.
 
 \begin{figure}[t]
 \label{codegeneratorview}
@@ -71,7 +71,7 @@ The final plug-in view is shown in Figure \ref{codegeneratorview}. Below we show
   \caption{Final plug-in view}
 \end{figure}
 
-{\footnotesize\begin{lstlisting}
+{\footnotesize\begin{lstlisting}[label=generatedCode,caption=Generated code of an Intent]
 Intent ast = new Intent("android.intent.action.SEND");
 ast.setType("text/plain");
 ast.putExtra("android.intent.extra.TEXT", text);

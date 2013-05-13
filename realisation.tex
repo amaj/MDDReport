@@ -27,9 +27,9 @@ We begin by determining the DSL of Android Intents and built our Ecore meta-mode
   \caption{Meta-model of Intent}
 \end{figure}
 
-The second stage of development was to take this model and build the Xtext grammar. The final Xtext grammar we produced was based on the default grammar that was generated but with several modifications for simplification and the use of enumerated types. To test the grammar we developed several models based on some examples that we had previously chosen. This allowed us to make changes to both the Xtext grammar and the Ecore model when one or both did not suit the required data from the Intents. The developed models in our DSL are used as our dataset for the plug-in. An example of an Intent in our DSL is shown below:
+The second stage of development was to take this model and build the Xtext grammar. The final Xtext grammar we produced was based on the default grammar that was generated but with several modifications for simplification and the use of enumerated types. To test the grammar we developed several models based on some examples that we had previously chosen. This allowed us to make changes to both the Xtext grammar and the Ecore model when one or both did not suit the required data from the Intents. The developed models in our DSL are used as our dataset for the plug-in. An example of an Intent in our DSL is shown in the Listing \ref{dsl}.
 
-{\footnotesize\begin{lstlisting}[escapechar=!]
+{\footnotesize\begin{lstlisting}[escapechar=!,label=dsl,caption=Intent in DSL]
 ImplicitIntent ActionSendText {
 	type "text/plain"
 	category "android.intent.category.DEFAULT"
@@ -43,9 +43,9 @@ ImplicitIntent ActionSendText {
 
 The plug-in uses Model-to-Model transformations, and for this purpose we use JDT and AST as explained in the Section \ref{tools}. The database as defined in our abstract syntax is loaded, and the plug-in interface is built by iterating over the data; the final plug-in interface is presented in the figure \ref{codegeneratorview}. The interface allows a user to choose an Intent and generate the respective code in place where the cursor is. This code is generated through a Model-to-Model transformation from the data held in the abstract syntax to the AST nodes.
 
-The Java code snippet shown bellow, shows how to load a DSL object into a stand alone Java application with the getBundle() method which allocates specific objects when the application needs to locate such object using this method, it does allow to write independent Java application.
+The Java code snippet shown in the Listing \ref{loadingDsl}, shows how to load a DSL object into a stand alone Java application with the getBundle() method which allocates specific objects when the application needs to locate such object using this method, it does allow to write independent Java application.
 
-{\footnotesize\begin{lstlisting}
+{\footnotesize\begin{lstlisting}[label=loadingDsl,caption=Loading a DSL object into Java application]
 public Model getModel() {
 	Injector injector = new IntentDslStandaloneSetup().createInjectorAndDoEMFRegistration();
 	XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);

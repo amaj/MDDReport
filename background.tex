@@ -27,9 +27,6 @@ startActivity(intent);
 
 In the case where an Intent requires a callback function, the Intent must be started with the function onStartActivityResult(). This function takes an additional integer parameter that is used in the callback function to determine the activity which is being returned.
 
-Activities have a single focus point, interaction with users. Activities class takes care of which windows those the application is placed in the UI. 
-
-
 Since more than one activity or service can be eligible for carrying out a generic action, the Manifest-file of the application will define the conditions upon which to choose the correct activity or service given the context. When an activity is declared in the manifest the use of Intent Filters serve to inform which implicit actions they can handle. Examples of Intent Filters are presented in a listing \ref{intentFilters}.
 
 {\footnotesize\begin{lstlisting}[label=intentFilters,caption=Intent Filters]

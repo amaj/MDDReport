@@ -5,9 +5,7 @@
 The work we have done over the course of this project has concluded with a final plug-in for which the scope of functionality can be further expanded, with our current code base providing the basis for further development into areas such as:
 
 \begin{itemize}
-\item Code generation to a greater extent. This could include generation of code for broadcast receivers and Intent callback methods.
-\item Automatic code completion.
-\item Extracting Intent calls from existing code.
-\item Acquiring the data for Intent code generation, from an external database.
-\item Adding permissions to the manifest file automatically, if the data we have concerning a specific Intent indicates that it is required.
+\item \textbf{Automatic code completion.} Giving the editor the ability to provide code completion options as the user types would be a much smoother code generation process for the user. The code completion could also give documentation hints and links as the user hovers over a given element.
+\item \textbf{Extracting Intent calls from existing code.} The ability to examine existing Java classes and Manifest files and including any Intents found into our database on the fly would be a great addition for giving support to custom Intent calls.
+\item \textbf{Acquiring the data for Intent code generation, from an external database.} A solution to the threat in which our database could become outdated would be a web service which automatically or manually updates the plug-in database.
 \end{itemize}

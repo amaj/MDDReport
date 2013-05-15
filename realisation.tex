@@ -58,6 +58,13 @@ The plug-in is capable of handling the three different types of Intent identifie
 \label{codegeneratorview}
 \end{figure}
 
+\begin{figure}[t]
+  \centering
+    \includegraphics[width=.45\textwidth]{ast}
+  \caption{AST of Generated Intent Code}
+\label{intenttreeview}
+\end{figure}
+
 Listing \ref{generatedCode} shows an example of the generated code for an Intent which sends customized string to a non specified receiver. The AST of this generated code is shown in Figure \ref{intenttreeview}. To build the AST the Java code required is quite verbose, for example the code shown in Listing \ref{astjavacodesettype} adds the statement to set the type property of the intent - as shown on line two of Figure \ref{generatedCode}. Intents have several properties which can be set, and along with additional code required to build exception handling and callback receivers, the Java code required to build the necessary AST exceeds several hundred lines of code. This verboseness introduces increased complexity and maintainability issues into our plug-in, but could probably be reduced with further development and code encapsulation.
 
 {\footnotesize\begin{lstlisting}[label=generatedCode,caption=Generated code of an Intent]
@@ -85,10 +92,3 @@ if(intentType != null) {
 	
 }		
 \end{lstlisting}}
-
-\begin{figure}[t]
-  \centering
-    \includegraphics[width=.5\textwidth]{ast}
-  \caption{AST of Generated Intent Code}
-\label{intenttreeview}
-\end{figure}
